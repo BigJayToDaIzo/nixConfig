@@ -5,7 +5,6 @@
   # paths it should manage.
   home.username = "jm";
   home.homeDirectory = "/home/jm";
-
   home.packages = [
     pkgs.btop
     pkgs.pfetch-rs
@@ -15,13 +14,35 @@
     pkgs.vlc
     pkgs.ripgrep
   ];
-
   home.stateVersion = "24.11";
-
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
-  # Window Manager Shenannigens
+  # Nvidia
+  # Enable OpenGL
+  hardware.opengl = {
+    enable = true;
+    driSupport = true;
+    driSupport32Bit = true;
+  };
+
+  #Load nvidia driver for Xorg and Wayland
+  services.xserver.videoDrivers = ["nvidia"];
+
+  hardware.nvidia = {
+    modesetting.enable = true;
+    # Enable this if you have graphical corruption issues or 
+    # application crashes after waking from sleep
+    powerManagement.enable = false;
+    powerManagement.finegrained = false;
+    # Use the NVidia open source kernel module (not 'nouveau')
+    # Experimental AF
+    open = false;
+    # Enable the Nvidia settings menu,
+    # accessible via `nvidia-settings`
+    nvidiaSettings = true;
+    package = config.boot.kernelPackages.nvidiaPackages.vulkan_beta;
+    # Window Manager Shenannigens
   wayland.windowManager.hyprland.enable = true;
   wayland.windowManager.hyprland.settings = {
     "$mod" = "SUPER";
@@ -34,7 +55,7 @@
 	"mod, v, togglefloating,"
 	"mod, r, exec, $meun"
 	"mod, f, fullscreen,"
-];
+    ];
   };
 
   
