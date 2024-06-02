@@ -12,6 +12,7 @@
     pkgs.btop
     pkgs.pfetch-rs
     pkgs.zellij
+    pkgs.kitty
     pkgs.taskwarrior3
     pkgs.vlc
     pkgs.ripgrep
