@@ -58,7 +58,7 @@
     xkb = {
       variant = "";
       layout = "us";
-      option = "caps:escape";
+      options = "caps:escape";
     };
   };
 
