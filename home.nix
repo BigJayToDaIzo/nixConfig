@@ -13,6 +13,7 @@
     pkgs.zellij
     pkgs.taskwarrior3
     pkgs.vlc
+    pkgs.ripgrep
   ];
 
   
