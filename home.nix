@@ -6,6 +6,9 @@
   home.username = "jm";
   home.homeDirectory = "/home/jm";
   home.packages = [
+    pkgs.wl-clipboard-rs
+    pkgs.wofi
+    pkgs.wofi-emoji
     pkgs.btop
     pkgs.pfetch-rs
     pkgs.zellij
