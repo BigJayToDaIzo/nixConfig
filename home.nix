@@ -11,6 +11,8 @@
     pkgs.pfetch-rs
     pkgs.wezterm
     pkgs.zellij
+    pkgs.taskwarrior3
+    pkgs.vlc
   ];
 
   
