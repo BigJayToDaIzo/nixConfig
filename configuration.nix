@@ -58,6 +58,7 @@
     xkb = {
       variant = "";
       layout = "us";
+      options = "caps:swapescape";
     };
   };
 
@@ -87,11 +88,9 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.jm = {
     isNormalUser = true;
-    description = "Nunya Dambitness";
+    description = "Jay Em";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-    #  thunderbird
-    ];
+    packages = with pkgs; [ ];
   };
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
