@@ -1,24 +1,13 @@
 { config, pkgs, ... }:
 
-  home.packages = [
-    pkgs.wl-clipboard
-    pkgs.wofi
-    pkgs.wofi-emoji
-    pkgs.btop
-    pkgs.pfetch-rs
-    pkgs.zellij
-    pkgs.kitty
-    pkgs.taskwarrior3
-    pkgs.vlc
-    pkgs.ripgrep
-  ];
 {
   # Home manager needs a bit of information about you and the 
   # paths it should manage.
   home.username = "jm";
   home.homeDirectory = "/home/jm";
   home.packages = [
-    pkgs.wl-clipboard-rs
+    pkgs.wl-clipboard
+    pkgs.wl-clipboard-x11
     pkgs.wofi
     pkgs.wofi-emoji
     pkgs.btop
