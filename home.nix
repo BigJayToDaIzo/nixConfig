@@ -6,7 +6,7 @@
   home.username = "jm";
   home.homeDirectory = "/home/jm";
   home.packages = [
-    pkgs.xclip
+    pkgs.copyq
     pkgs.wofi
     pkgs.wofi-emoji
     pkgs.btop
