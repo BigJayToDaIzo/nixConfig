@@ -27,14 +27,14 @@
     "$mod" = "SUPER";
     bind = 
     [
-    	"mod, q, exec, $terminal"
-	"mod, c, killactive,"
-	"mod, CTRL, M, exec, $quit"
-	"mod, e, exec, $quit"
-	"mod, v, togglefloating,"
-	"mod, r, exec, $meun"
-	"mod, f, fullscreen,"
+    	"$mod, q, exec, kitty"
+	"$mod, c, killactive,"
+	"$mod, CTRL, M, exit,"
+	"$mod, v, togglefloating,"
+	"$mod, r, exec, wofi"
+	"$mod, f, fullscreen,"
     ];
+
   };
   # programs.program here and beyond
   # services.service here and beyond
