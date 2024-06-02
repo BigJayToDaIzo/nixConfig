@@ -7,8 +7,6 @@
   home.homeDirectory = "/home/jm";
   home.packages = [
     pkgs.xclip
-    pkgs.wl-clipboard
-    pkgs.wl-clipboard-x11
     pkgs.wofi
     pkgs.wofi-emoji
     pkgs.btop
