@@ -25,8 +25,8 @@
   networking.networkmanager.enable = true;
   
   # Enable Auto Update/Upgrade
-  system.autoUpgrade.enable = true;
-  system.autoUptrade.allowReboot = true;
+  # system.autoUpgrade.enable = true;
+  # system.autoUpgrade.allowReboot = true;
   
   # Set your time zone.
   time.timeZone = "America/Chicago";
