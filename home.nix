@@ -7,13 +7,13 @@
   home.homeDirectory = "/home/jm";
 
   home.packages = [
-    pkg.btop
-    pkg.pfetch
+    pkgs.btop
+    pkgs.pfetch-rs
   ];
 
   
 
-  home.stateVersion = "23.11";
+  home.stateVersion = "24.05";
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
