@@ -6,7 +6,6 @@
   home.username = "jm";
   home.homeDirectory = "/home/jm";
   home.packages = [
-    pkgs.ly
     pkgs.wl-clipboard
     pkgs.wofi
     pkgs.wofi-emoji
@@ -39,4 +38,5 @@
   };
   # programs.program here and beyond
   # services.service here and beyond
+
 }
