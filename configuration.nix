@@ -58,8 +58,8 @@
     xkb = {
       variant = "";
       layout = "us";
-      options = "caps:escape";
     };
+    xkbOptions = "caps:escape";
   };
 
   # Enable CUPS to print documents.
