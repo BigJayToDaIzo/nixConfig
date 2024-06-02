@@ -21,12 +21,21 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
-  # Window Manager Shenanniger
+  # Window Manager Shenannigens
   wayland.windowManager.hyprland.enable = true;
-  # wyaland.windowManager.hyprland.settings = {
-  # "$mod" = "SUPER";
-
-  # }
+  wayland.windowManager.hyprland.settings = {
+    "$mod" = "SUPER";
+    bind = 
+    [
+    	"mod, q, exec, $terminal"
+	"mod, c, killactive,"
+	"mod, CTRL, M, exec, $quit"
+	"mod, e, exec, $quit"
+	"mod, v, togglefloating,"
+	"mod, r, exec, $meun"
+	"mod, f, fullscreen,"
+];
+  };
 
   
   # programs.program here and beyond
