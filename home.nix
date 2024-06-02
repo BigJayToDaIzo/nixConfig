@@ -42,7 +42,8 @@
     # accessible via `nvidia-settings`
     nvidiaSettings = true;
     package = config.boot.kernelPackages.nvidiaPackages.vulkan_beta;
-    # Window Manager Shenannigens
+  };
+  # Window Manager Shenannigens
   wayland.windowManager.hyprland.enable = true;
   wayland.windowManager.hyprland.settings = {
     "$mod" = "SUPER";
@@ -57,9 +58,6 @@
 	"mod, f, fullscreen,"
     ];
   };
-
-  
   # programs.program here and beyond
-
   # services.service here and beyond
 }
