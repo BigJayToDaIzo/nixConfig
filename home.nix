@@ -14,6 +14,7 @@
     pkgs.taskwarrior3
     pkgs.vlc
     pkgs.ripgrep
+    pkgs.vesktop
   ];
 
   
