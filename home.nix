@@ -20,10 +20,6 @@
 	];
 	home.stateVersion = "24.05";
 
-	fonts.packages = with pkgs; [
-		nerdfonts
-	];
-
 	# programs.program here and beyond
 	# Let Home Manager install and manage itself.
 	programs = {
