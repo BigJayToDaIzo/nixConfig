@@ -23,11 +23,13 @@
 	# programs.program here and beyond
 	# Let Home Manager install and manage itself.
 	programs = {
+		bash = {
+			"eval "$(starship init bash)""	
+		};	
 		home-manager.enable = true;
 		starship = {
 			enable = true;
 			settings = {
-				
 
 			};
 		};
