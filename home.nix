@@ -17,7 +17,7 @@
     pkgs.vlc
     pkgs.ripgrep
   ];
-  home.stateVersion = "24.11";
+  home.stateVersion = "24.05";
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
