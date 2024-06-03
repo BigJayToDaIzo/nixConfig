@@ -94,11 +94,16 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  # Install firefox.
-  programs.firefox.enable = true;
+	# Install firefox.
+	programs.firefox.enable = true;
+	programs.bash = {
+		interactiveShellInit = {
+			"eval "$(starship init bash)""	
+		};
+	};	
 
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
+	# Allow unfree packages
+	nixpkgs.config.allowUnfree = true;
 
 	# List packages installed in system profile. To search, run:
 	# $ nix search wget
