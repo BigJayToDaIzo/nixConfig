@@ -97,9 +97,7 @@
 	# Install firefox.
 	programs.firefox.enable = true;
 	programs.bash = {
-		interactiveShellInit = {
-			"eval "$(starship init bash)""	
-		};
+		promptInit = ''eval "$(starship init bash)"'';
 	};	
 
 	# Allow unfree packages
@@ -109,6 +107,7 @@
 	# $ nix search wget
 	environment = {
 		systemPackages = with pkgs; [
+			bash
 			git
 			neovim
 			curl
