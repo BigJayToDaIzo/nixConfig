@@ -29,7 +29,7 @@
 			settings = {
 				
 
-			}
+			};
 		};
 	};
 	# services.service here and beyond

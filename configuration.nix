@@ -110,7 +110,7 @@
 			wget
 		];
 		sessionVariables = rec {
-			STARSHIP_CONFIG = "~/.config/starship/starship.toml";
+			STARSHIP_CONFIG = "$HOME/.config/starship/starship.toml";
 		};
 	};
 
