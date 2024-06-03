@@ -26,8 +26,11 @@
 		home-manager.enable = true;
 		starship = {
 			enable = true;
+			settings = {
+				
+
+			}
 		};
 	};
 	# services.service here and beyond
-
 }

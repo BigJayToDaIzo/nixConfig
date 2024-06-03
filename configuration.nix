@@ -100,14 +100,19 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
-  environment.systemPackages = with pkgs; [
-  git
-  neovim
-  curl
-  wget
-  ];
+	# List packages installed in system profile. To search, run:
+	# $ nix search wget
+	environment = {
+		systemPackages = with pkgs; [
+			git
+			neovim
+			curl
+			wget
+		];
+		sessionVariables = rec {
+			STARSHIP_CONFIG = "~/.config/starship/starship.toml";
+		};
+	};
 
 	# Font stuff
 	fonts.packages = with pkgs; [
