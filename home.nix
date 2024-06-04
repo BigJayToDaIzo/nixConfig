@@ -10,14 +10,15 @@
 	home.username = "jm";
 	home.homeDirectory = "/home/jm";
 	home.packages = [
+		pkgs.zsh
 		pkgs.gh
 		pkgs.wl-clipboard
 		pkgs.wofi
 		pkgs.wofi-emoji
 		pkgs.btop
 		pkgs.pfetch-rs
+		pkgs.alacritty
 		pkgs.zellij
-		pkgs.wezterm
 		pkgs.taskwarrior3
 		pkgs.vlc
 		pkgs.ripgrep
@@ -38,6 +39,10 @@
 			vimAlias = true;
 			colorschemes.ayu.enable = true;
 			
+		};
+		alacritty = {
+			# shell = "/bin/zsh";
+
 		};
 	};
 	# services.service here and beyond
