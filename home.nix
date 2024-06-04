@@ -10,7 +10,6 @@
 	home.username = "jm";
 	home.homeDirectory = "/home/jm";
 	home.packages = [
-		pkgs.zsh
 		pkgs.gh
 		pkgs.wl-clipboard
 		pkgs.wofi
@@ -43,9 +42,12 @@
 		alacritty = {
 			enable = true;
 			settings = {
-				shell.program = "${pkgs.zsh}/bin/zsh";
-				padding.x = 2;
-				padding.y = 2;
+				window = {
+					dynamic_padding = true;
+					decorations_theme_variant = "Dark";
+					padding.x = 2;
+					padding.y = 2;
+				};
 			};
 		};
 	};
