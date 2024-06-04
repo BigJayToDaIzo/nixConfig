@@ -17,7 +17,7 @@
 		pkgs.btop
 		pkgs.pfetch-rs
 		pkgs.zellij
-		pkgs.kitty
+		pkgs.wezterm
 		pkgs.taskwarrior3
 		pkgs.vlc
 		pkgs.ripgrep
@@ -34,6 +34,10 @@
 		nixvim = {
 			enable = true;
 			defaultEditor = true;
+			viAlias = true;
+			vimAlias = true;
+			colorschemes.ayu.enable = true;
+			
 		};
 	};
 	# services.service here and beyond
