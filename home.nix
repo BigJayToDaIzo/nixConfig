@@ -36,20 +36,20 @@
 			defaultEditor = true;
 			viAlias = true;
 			vimAlias = true;
-			colorschemes.ayu.enable = true;
-			
+			colorschemes.desert.enable = true;
+			clipboard.providers.wl-copy.enable = true;
+			options = {
+				number = true;
+				relativenumber = true;
+				shiftwidth = 2;
+
+			};
+			plugins = {
+				lightline.enable = true;
+				
+
+			};
 		};
-		# alacritty = {
-		# 	enable = true;
-		# 	settings = {
-		# 		window = {
-		# 			dynamic_padding = true;
-		# 			decorations_theme_variant = "Dark";
-		# 			padding.x = 2;
-		# 			padding.y = 2;
-		# 		};
-		# 	};
-		# };
 	};
 	# services.service here and beyond
 }
