@@ -41,8 +41,12 @@
 			
 		};
 		alacritty = {
-			# shell = "/bin/zsh";
-
+			enable = true;
+			settings = {
+				shell.program = "${pkgs.zsh}/bin/zsh";
+				padding.x = 2;
+				padding.y = 2;
+			};
 		};
 	};
 	# services.service here and beyond
