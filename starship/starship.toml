@@ -84,7 +84,7 @@ format = '[$symbol](iced_out_os)'
 
 [os.symbols]
 Arch = ' '
-NixOS = ' '
+NixOS = ''
 Ubuntu = ' '
 Windows = ' '
 
