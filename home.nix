@@ -39,17 +39,17 @@
 			colorschemes.ayu.enable = true;
 			
 		};
-		alacritty = {
-			enable = true;
-			settings = {
-				window = {
-					dynamic_padding = true;
-					decorations_theme_variant = "Dark";
-					padding.x = 2;
-					padding.y = 2;
-				};
-			};
-		};
+		# alacritty = {
+		# 	enable = true;
+		# 	settings = {
+		# 		window = {
+		# 			dynamic_padding = true;
+		# 			decorations_theme_variant = "Dark";
+		# 			padding.x = 2;
+		# 			padding.y = 2;
+		# 		};
+		# 	};
+		# };
 	};
 	# services.service here and beyond
 }
