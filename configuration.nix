@@ -94,34 +94,34 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-	# Install firefox.
-	programs.firefox.enable = true;
-	programs.bash = {
-		promptInit = ''eval "$(starship init bash)"'';
-	};	
+  # Install firefox.
+  programs.firefox.enable = true;
+  programs.bash = {
+    promptInit = ''eval "$(starship init bash)"'';
+  };	
 
-	# Allow unfree packages
-	nixpkgs.config.allowUnfree = true;
+  # Allow unfree packages
+  nixpkgs.config.allowUnfree = true;
 
-	# List packages installed in system profile. To search, run:
-	# $ nix search wget
-	environment = {
-		systemPackages = with pkgs; [
-			bash
-			git
-			neovim
-			curl
-			wget
-		];
-		sessionVariables = rec {
-			STARSHIP_CONFIG = "$HOME/.config/starship/starship.toml";
-		};
-	};
+  # List packages installed in system profile. To search, run:
+  # $ nix search wget
+  environment = {
+    systemPackages = with pkgs; [
+      bash
+      git
+      neovim
+      curl
+      wget
+    ];
+    sessionVariables = rec {
+      STARSHIP_CONFIG = "$HOME/.config/starship/starship.toml";
+    };
+  };
 
-	# Font stuff
-	fonts.packages = with pkgs; [
-		nerdfonts
-	];
+  # Font stuff
+  fonts.packages = with pkgs; [
+	  nerdfonts
+  ];
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;

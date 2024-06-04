@@ -12,11 +12,8 @@
   home.packages = [
     pkgs.gh
     pkgs.wl-clipboard
-    pkgs.wofi
-    pkgs.wofi-emoji
     pkgs.btop
     pkgs.pfetch-rs
-    pkgs.alacritty
     pkgs.zellij
     pkgs.taskwarrior3
     pkgs.vlc
@@ -44,11 +41,22 @@
 	shiftwidth = 2;
       };
       plugins = {
+	mini = {
+	  enable = true;
+	};
+	neo-tree = {
+	  enable = true;
+	  
+	};
 	bufferline = {
 	  enable = true;
 	};
 	treesitter = {
 	  enable = true;
+	};
+	lualine = {
+	  enable = true;
+	  globalstatus = true;
 	};
       };
     };
