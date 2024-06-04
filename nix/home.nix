@@ -15,6 +15,7 @@
     pkgs.wl-clipboard
     pkgs.btop
     pkgs.pfetch-rs
+    pkgs.kitty
     pkgs.zellij
     pkgs.taskwarrior3
     pkgs.vlc
@@ -29,19 +30,52 @@
     starship = {
       enable = true;
     };
+    kitty = {
+      enable = true;
+      font.name = "0xProto Nerd Font Mono";
+      font.size = 14;
+      settings = {
+
+      };
+    };
     nixvim = {
       enable = true;
       enableMan = true;
       defaultEditor = true;
       viAlias = true;
       vimAlias = true;
-      colorscheme = "desert";
+      colorschemes.ayu.enable = true;
+      colorschemes.ayu.settings.mirage = true;
       opts = {
 	number = true;
 	relativenumber = true;
 	shiftwidth = 2;
-      };
+     };
       plugins = {
+	bufferline = {
+	  enable = true;
+	};
+	lazygit = {
+	  enable = true;
+	};
+	lualine = {
+	  enable = true;
+	  globalstatus = true;
+	};
+	lsp = {
+	  enable = true;
+	  servers = {
+	    nil-ls.enable = true;
+	    golangci-lint-ls.enable = true;
+	    gopls.enable = true;
+	    html.enable = true;
+	    htmx.enable = true;
+	    lua-ls.enable = true;
+	    nixd.enable = true;
+
+	  };
+	};
+	lsp-format.enable = true;
 	mini = {
 	  enable = true;
 	};
@@ -49,15 +83,8 @@
 	  enable = true;
 	  
 	};
-	bufferline = {
-	  enable = true;
-	};
 	treesitter = {
 	  enable = true;
-	};
-	lualine = {
-	  enable = true;
-	  globalstatus = true;
 	};
       };
     };

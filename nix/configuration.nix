@@ -121,6 +121,10 @@
   # Font stuff
   fonts.packages = with pkgs; [
 	  nerdfonts
+	  noto-fonts
+	  noto-fonts-color-emoji
+	  noto-fonts-emoji-blob-bin
+	  line-awesome
   ];
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
