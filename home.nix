@@ -33,11 +33,8 @@
 		};
 		nixvim = {
 			enable = true;
-
+			defaultEditor = true;
 		};
 	};
 	# services.service here and beyond
-
-
-	# Inputs n shts?
 }
