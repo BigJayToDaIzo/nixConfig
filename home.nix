@@ -1,6 +1,10 @@
-{ config, pkgs, ... }:
+{ config, pkgs, nixvim, ... }:
 
 {
+	imports =
+	[ # Include the results of the hardware scan.
+		nixvim.homeManagerModules.nixvim
+	];
 	# Home manager needs a bit of information about you and the 
 	# paths it should manage.
 	home.username = "jm";
@@ -26,10 +30,14 @@
 		home-manager.enable = true;
 		starship = {
 			enable = true;
-			settings = {
+		};
+		nixvim = {
+			enable = true;
 
-			};
 		};
 	};
 	# services.service here and beyond
+
+
+	# Inputs n shts?
 }
