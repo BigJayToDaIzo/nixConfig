@@ -16,6 +16,7 @@
     pkgs.btop
     pkgs.pfetch-rs
     pkgs.fastfetch
+    pkgs.fish
     pkgs.kitty
     pkgs.alacritty
     pkgs.zellij
@@ -66,7 +67,6 @@
 	window = {
 	  padding = { x = 5; y = 5; };
 	  dynamic_padding = true;
-	  decorations = "None";
 	  decorations_theme_variant = "Dark";
 	  resize_increments = true;
 	};
@@ -87,6 +87,9 @@
 	  };
 	};
       };
+    };
+    fish = {
+      enable = true;
     };
     starship = {
       enable = true;
