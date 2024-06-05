@@ -43,6 +43,8 @@
     settings = {
       "$mod" = "SUPER";
       input ={
+	kb_layout = "us";
+	kb_options = "caps:swapescape";
       };
       bind = [
 	"$mod, Q, exec, alacritty"
@@ -115,16 +117,27 @@
 	"HDMI-A-1,preferred,-1920x360,auto"
       ];
       workspace = [
-	"workspace=1, monitor:HDMI-A-1, persistent:true, default:true"
-	"workspace=2, monitor:HDMI-A-1, persistent:true"
-	"workspace=3, monitor:HDMI-A-1"
-	"workspace=4, monitor:HDMI-A-1, persistent:true"
-	"workspace=5, monitor:DP-3, persistent:true, default:true"
-	"workspace=6, monitor:DP-3, persistent:true"
-	"workspace=7, monitor:DP-3"
-	"workspace=8, monitor:DP-2, persistent:true, default:true"
-	"workspace=9, monitor:DP-2, persistent:true"
-	"workspace=0, monitor:DP-2	"
+	"1, monitor:HDMI-A-1, persistent:true, default:true"
+	"2, monitor:HDMI-A-1, persistent:true"
+	"3, monitor:HDMI-A-1"
+	"4, monitor:HDMI-A-1, persistent:true"
+	"5, monitor:DP-3, persistent:true, default:true"
+	"6, monitor:DP-3, persistent:true"
+	"7, monitor:DP-3"
+	"8, monitor:DP-2, persistent:true, default:true"
+	"9, monitor:DP-2, persistent:true"
+	"0, monitor:DP-2"
+      ];
+      env = [
+	"XCURSOR_SIZE,32"
+	"ge to qt6ct if you have that"
+	"QT_QPA_PLATFORMTHEME,qt6ct "
+	"LIBVA_DRIVER_NAME, nvidia"
+	"XDG_SESSION_TYPE, wayland"
+	"GMB_BACKEND, nvidia-drm"
+	"__GLX_VENDOR_LIBRARY_NAME, nvidia"
+	"WLR_NO_HARDWARE_CURSORS, 1"
+	"WLR_RENDERER_ALLOW_SOFTWARE, 1"
       ];
     };
   };
