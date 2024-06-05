@@ -16,7 +16,6 @@
     pkgs.btop
     pkgs.pfetch-rs
     pkgs.fastfetch
-    pkgs.fish
     pkgs.kitty
     pkgs.alacritty
     pkgs.zellij
@@ -87,9 +86,6 @@
 	  };
 	};
       };
-    };
-    fish = {
-      enable = true;
     };
     starship = {
       enable = true;

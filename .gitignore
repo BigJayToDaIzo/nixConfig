@@ -3,3 +3,6 @@ environment.d
 evolution/sources
 vesktop
 vlc
+fontconfig/conf.d
+fontconfig/conf.d
+systemd/user

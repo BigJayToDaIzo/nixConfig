@@ -64,6 +64,7 @@
     xkb = {
       variant = "";
       layout = "us";
+      options = "caps:Swapescape";
     };
   };
 
@@ -95,16 +96,26 @@
     isNormalUser = true;
     description = "Jay Em";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [ ];
+    packages = with pkgs; [
+      pkg.fish
+    ];
+    shell = pkgs.fish;
+    useDefaultShell = true;
   };
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Install firefox.
-  programs.firefox.enable = true;
-  programs.bash = {
-    promptInit = ''eval "$(starship init bash)"'';
-  };	
+  programs = {
+    firefox.enable = true;
+    bash = {
+      promptInit = ''eval "$(starship init bash)"'';
+    };	
+    fish = {
+      enable = true;
+      promptInit = ''eval "$(starship init fish)"'';
+    };
+  };
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
