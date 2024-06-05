@@ -54,7 +54,8 @@
   };
 
   # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
+  services.displayManager.sddm.enable = true;
+  # services.xserver.displayManager.gdm.enable = false;
 
   services.xserver.windowManager.i3.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
@@ -117,9 +118,6 @@
   # Install firefox.
   programs = {
     firefox.enable = true;
-    bash = {
-      promptInit = ''eval "$(starship init bash)"'';
-    };	
     fish = {
       enable = true;
       promptInit = ''eval "$(starship init fish)"'';
@@ -181,5 +179,4 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.05"; # Did you read the comment?
-
 }
