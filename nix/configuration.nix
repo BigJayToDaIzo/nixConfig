@@ -97,13 +97,22 @@
     description = "Jay Em";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-      pkg.fish
+      fish
     ];
     shell = pkgs.fish;
-    useDefaultShell = true;
   };
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix = {
+    gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 30d";
+    };
+    settings = {
+      experimental-features = [ "nix-command" "flakes" ];
+      auto-optimise-store = true;
+    };
+  };
 
   # Install firefox.
   programs = {

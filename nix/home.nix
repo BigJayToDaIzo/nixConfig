@@ -10,6 +10,7 @@
   home.username = "jm";
   home.homeDirectory = "/home/jm";
   home.packages = [
+    pkgs.fish
     pkgs.lazygit
     pkgs.gh
     pkgs.wl-clipboard
