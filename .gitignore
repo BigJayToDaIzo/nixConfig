@@ -6,3 +6,7 @@ vlc
 fontconfig/conf.d
 fontconfig/conf.d
 systemd/user
+alacritty
+hypr
+kitty
+nvim

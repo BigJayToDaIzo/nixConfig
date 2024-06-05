@@ -123,6 +123,9 @@
     fish = {
       enable = true;
       promptInit = ''eval "$(starship init fish)"'';
+      shellInit = ''
+	zoxide init fish | source
+      '';
     };
   };
 
