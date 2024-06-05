@@ -42,6 +42,8 @@
     systemd.enable = true;
     settings = {
       "$mod" = "SUPER";
+      input ={
+      };
       bind = [
 	"$mod, Q, exec, alacritty"
 	"$mod, C, killactive,"
@@ -55,7 +57,7 @@
 	# "$mod, D, exec, firefox -new-instance -kiosk -P Discord"
 	# "$mod, P, exec, firefox -new-instance -private-window -P Private"
 	"$mod CTRL ALT, L, exec, $lock"
-	",Print, exec, grim -g '$(slurp)' - | swappy -f -"
+	'',Print, exec, grim -g "$(slurp)" - | swappy -f -''
 	# "$mod, T, togglesplit, # dwindle
 	# "$mod, P, pseudo, # dwindle"
 	# Move focus with main"$mod + arrow keys
@@ -111,6 +113,18 @@
 	"DP-2,2560x1440@144,0x-1440,auto"
 	"DP-3,preferred,0x0,auto"
 	"HDMI-A-1,preferred,-1920x360,auto"
+      ];
+      workspace = [
+	"workspace=1, monitor:HDMI-A-1, persistent:true, default:true"
+	"workspace=2, monitor:HDMI-A-1, persistent:true"
+	"workspace=3, monitor:HDMI-A-1"
+	"workspace=4, monitor:HDMI-A-1, persistent:true"
+	"workspace=5, monitor:DP-3, persistent:true, default:true"
+	"workspace=6, monitor:DP-3, persistent:true"
+	"workspace=7, monitor:DP-3"
+	"workspace=8, monitor:DP-2, persistent:true, default:true"
+	"workspace=9, monitor:DP-2, persistent:true"
+	"workspace=0, monitor:DP-2	"
       ];
     };
   };
