@@ -11,6 +11,8 @@
   home.homeDirectory = "/home/jm";
   home.packages = [
     pkgs.fish
+    pkgs.fzf
+    pkgs.zoxide
     pkgs.lazygit
     pkgs.gh
     pkgs.wl-clipboard
@@ -90,6 +92,8 @@
     };
     starship = {
       enable = true;
+      enableFishIntegration = true;
+      enableTransience = true;
     };
     kitty = {
       enable = true;
