@@ -153,6 +153,10 @@
 	};
       };
     };
+    zoxide = {
+      enable = true;
+      enableFishIntegration = true;
+    };
   };
   # services.service here and beyond
 }
