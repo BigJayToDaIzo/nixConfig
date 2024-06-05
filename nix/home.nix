@@ -66,6 +66,7 @@
 	window = {
 	  padding = { x = 5; y = 5; };
 	  dynamic_padding = true;
+	  decorations = "None";
 	  decorations_theme_variant = "Dark";
 	  resize_increments = true;
 	};
