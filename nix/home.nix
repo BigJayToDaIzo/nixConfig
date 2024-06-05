@@ -25,6 +25,9 @@
     pkgs.vlc
     pkgs.ripgrep
     pkgs.egl-wayland
+    pkgs.grim
+    pkgs.swappy
+    pkgs.slurp
   ];
   home.stateVersion = "24.05";
 
@@ -76,7 +79,7 @@
 	"$mod, 8, workspace, 8"
 	"$mod, 9, workspace, 9"
 	"$mod, 0, workspace, 10"
-	# Move active window to a workspace with mainMod + SHIFT + [0-9]
+	# Move active window to a workspace with mod + SHIFT + [0-9]
 	"$mod SHIFT, 1, movetoworkspace, 1"
 	"$mod SHIFT, 2, movetoworkspace, 2"
 	"$mod SHIFT, 3, movetoworkspace, 3"
@@ -95,8 +98,8 @@
 	"$mod, mouse_up, workspace, e-1"
       ];
       bindm = [
-	"$mainMod, mouse:272, movewindow"
-	"$mainMod, mouse:273, resizewindow"
+	"$mod, mouse:272, movewindow"
+	"$mod, mouse:273, resizewindow"
       ];
       binde = [
 	"$mod CTRL, h, resizeactive, -10 0"
@@ -104,6 +107,11 @@
 	"$mod CTRL, k, resizeactive, 0 -10"
 	"$mod CTRL, l, resizeactive, 10 0"
       ];	
+      monitor = [
+	"DP-2,2560x1440@144,0x-1440,auto"
+	"DP-3,preferred,0x0,auto"
+	"HDMI-A-1,preferred,-1920x360,auto"
+      ];
     };
   };
 
