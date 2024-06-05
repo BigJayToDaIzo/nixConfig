@@ -1,8 +1,8 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 format = """
-$sudo$os$env_var$hostname$directory$all$cmd_duration$fill$time
-$status$character
+$os$env_var$hostname$directory$all$cmd_duration$fill$time
+$status$character$sudo
 """
 
 # Must add ALL the package possiblities by hand because $all is forcing a newline
@@ -26,7 +26,7 @@ iced_out_os = '#09ecf8'
 [palettes.super_dank_mellow]
 
 [character]
-success_symbol = '[󱞩](char_success_fg)'
+success_symbol = '[](iced_out_os)'
 error_symbol = '[](char_poobie_fg)'
 vimcmd_symbol = '[](time_fg)'
 vimcmd_replace_one_symbol = '[](time_fg)'
@@ -38,9 +38,9 @@ format = '[\[󱎫 $duration\]](time_fg)'
 
 [directory]
 style = 'directory_fg'
-read_only = '  '
+read_only = ''
 read_only_style = 'char_poobie_fg'
-home_symbol = ' 󰋜 '
+home_symbol = '󰋜'
 
 [env_var.USER]
 format = '[$env_value.](user_fg)'
@@ -57,7 +57,7 @@ tag_symbol = ''
 
 [git_metrics]
 disabled = false
-format = '(([ \[](time_fg)[+$added](char_success_fg))([-$deleted](time_fg))[\]](time_fg))'
+format = '(([\[](time_fg)[+$added](char_success_fg))([-$deleted](time_fg))[\]](time_fg))'
 
 [git_status]
 conflicted = '󱃟'
@@ -79,14 +79,14 @@ disabled = false
 format = '[  $ram( | $swap)](char_poobie_fg)'
 
 [os]
-disabled = false
+disabled = true
 format = '[$symbol](iced_out_os)'
 
 [os.symbols]
-Arch = ' '
+Arch = ''
 NixOS = ''
-Ubuntu = ' '
-Windows = ' '
+Ubuntu = ''
+Windows = ''
 
 [sudo]
 disabled = false

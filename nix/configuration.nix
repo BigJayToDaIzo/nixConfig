@@ -50,7 +50,6 @@
   services.xserver.enable = true;
   services.autorandr = {
     enable = true;
-    profile = "default";
 
   };
 
@@ -120,7 +119,7 @@
       curl
       wget
     ];
-    sessionVariables = rec {
+    sessionVariables = {
       STARSHIP_CONFIG = "$HOME/.config/starship/starship.toml";
     };
   };
