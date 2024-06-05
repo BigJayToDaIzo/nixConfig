@@ -130,6 +130,7 @@
 	zoxide init fish | source
       '';
     };
+    hyprland.enable = true;
   };
 
   # Allow unfree packages

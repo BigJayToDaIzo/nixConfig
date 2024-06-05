@@ -33,30 +33,35 @@
   fonts.fontconfig.defaultFonts.emoji = ["Symbols Nerd Font Mono"];
 
   # Window Manager (other in config, move here)
-  wayland.windowManager.hyprland.enable = true;
-  wayland.windowManager.hyprland.settings = {
-    "$mod" = "SUPER";
-    bind = [
-      "$mod, F, exec, firefox"
-      "$mod, Q, exec, kitty"
-      "$mod, C, killactive,"
-      "$mod CTRL, M, exit,"
-     ",Print, exec, grim -g '$(slurp)' - | swappy -f -"
-    ]
-    ++ (
-      # workspaces
-      # binds $mod + [shift +] {1..10} to [move to] workspace {1..10}
-      builtins.concatLists (builtins.genList (
-	x: let
-	  ws = let
-	    c = (x + 1) / 10;
-	  in
-	    builtins.toString (x + 1 - (c * 10));
-	in [
-	  "$mod, ${ws}, workspace, ${toString (x + 1)}"
-	  "$mod SHIFT, ${ws}, movetoworkspace, ${toString (x + 1)}"
-	]) 10)
-    ); 
+  wayland.windowManager.hyprland = {
+    enable = true;
+    package = pkgs.hyprland;
+    xwayland.enable = true;
+    systemd.enable = true;
+    settings = {
+      "$mod" = "SUPER";
+      bind = [
+	"$mod, F, exec, firefox"
+	"$mod, Q, exec, kitty"
+	"$mod, C, killactive,"
+	"$mod CTRL, M, exit,"
+       ",Print, exec, grim -g '$(slurp)' - | swappy -f -"
+      ]
+      ++ (
+	# workspaces
+	# binds $mod + [shift +] {1..10} to [move to] workspace {1..10}
+	builtins.concatLists (builtins.genList (
+	  x: let
+	    ws = let
+	      c = (x + 1) / 10;
+	    in
+	      builtins.toString (x + 1 - (c * 10));
+	  in [
+	    "$mod, ${ws}, workspace, ${toString (x + 1)}"
+	    "$mod SHIFT, ${ws}, movetoworkspace, ${toString (x + 1)}"
+	  ]) 10)
+      ); 
+    };
   };
 
   # programs.program here and beyond
@@ -89,11 +94,6 @@
 	  };
 	};
       };
-    };
-    starship = {
-      enable = true;
-      enableFishIntegration = true;
-      enableTransience = true;
     };
     kitty = {
       enable = true;
@@ -152,6 +152,11 @@
 	  enable = true;
 	};
       };
+    };
+    starship = {
+      enable = true;
+      enableFishIntegration = true;
+      enableTransience = true;
     };
     zoxide = {
       enable = true;
