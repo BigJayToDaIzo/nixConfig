@@ -28,6 +28,7 @@
     pkgs.grim
     pkgs.swappy
     pkgs.slurp
+    pkgs.waybar
   ];
   home.stateVersion = "24.05";
 
@@ -138,6 +139,20 @@
 	"__GLX_VENDOR_LIBRARY_NAME, nvidia"
 	"WLR_NO_HARDWARE_CURSORS, 1"
 	"WLR_RENDERER_ALLOW_SOFTWARE, 1"
+      ];
+      exec-once = [
+	"/usr/lib/polkit-kde-authentication-agent-1"
+	"[workspace special:magic silent] kitty -e lazygit -p ~/.config/"
+	"[workspace 1 silent;fullscreen] kitty -e zellij attach pomoTask"
+	"[workspace 2 silent;fullscreen] kitty -e btop"
+	"[workspace 4] firefox -new-instance -kiosk -P Discord"
+	"[workspace 5] kitty"
+	"[workspace 6 silent] kitty -e zellij attach configs"
+	"[workspace 8 silent] firefox -new-instance -P Youtube"
+	"[workspace 9 silent] vlc"
+      ];
+      exec = [
+	"waybar"
       ];
     };
   };
