@@ -1,5 +1,4 @@
 { config, pkgs, nixvim, ... }:
-
 {
   imports =
   [ # Include the results of the hardware scan.
@@ -41,26 +40,70 @@
     settings = {
       "$mod" = "SUPER";
       bind = [
-	"$mod, F, exec, firefox"
-	"$mod, Q, exec, kitty"
+	"$mod, Q, exec, alacritty"
 	"$mod, C, killactive,"
 	"$mod CTRL, M, exit,"
-       ",Print, exec, grim -g '$(slurp)' - | swappy -f -"
-      ]
-      ++ (
-	# workspaces
-	# binds $mod + [shift +] {1..10} to [move to] workspace {1..10}
-	builtins.concatLists (builtins.genList (
-	  x: let
-	    ws = let
-	      c = (x + 1) / 10;
-	    in
-	      builtins.toString (x + 1 - (c * 10));
-	  in [
-	    "$mod, ${ws}, workspace, ${toString (x + 1)}"
-	    "$mod SHIFT, ${ws}, movetoworkspace, ${toString (x + 1)}"
-	  ]) 10)
-      ); 
+	# "$mod, E, exec, $filemanager"
+	"$mod, V, togglefloating,"
+	# "$mod, R, exec, $menu"
+	"$mod, F, fullscreen,"
+	# "$mod, Y, exec, firefox -new-instance -P Youtube"
+	"$mod, Y, exec, firefox"
+	# "$mod, D, exec, firefox -new-instance -kiosk -P Discord"
+	# "$mod, P, exec, firefox -new-instance -private-window -P Private"
+	"$mod CTRL ALT, L, exec, $lock"
+	",Print, exec, grim -g '$(slurp)' - | swappy -f -"
+	# "$mod, T, togglesplit, # dwindle
+	# "$mod, P, pseudo, # dwindle"
+	# Move focus with main"$mod + arrow keys
+	"$mod, h, movefocus, l"
+	"$mod, l, movefocus, r"
+	"$mod, k, movefocus, u"
+	"$mod, j, movefocus, d"
+	# Move windows"
+	"$mod SHIFT, h, movewindow, l"
+	"$mod SHIFT, l, movewindow, r"
+	"$mod SHIFT, k, movewindow, u"
+	"$mod SHIFT, j, movewindow, d"
+	# Switch workspaces with main"$mod + [0-9]
+	"$mod, 1, workspace, 1"
+	"$mod, 2, workspace, 2"
+	"$mod, 3, workspace, 3"
+	"$mod, 4, workspace, 4"
+	"$mod, 5, workspace, 5"
+	"$mod, 6, workspace, 6"
+	"$mod, 7, workspace, 7"
+	"$mod, 8, workspace, 8"
+	"$mod, 9, workspace, 9"
+	"$mod, 0, workspace, 10"
+	# Move active window to a workspace with mainMod + SHIFT + [0-9]
+	"$mod SHIFT, 1, movetoworkspace, 1"
+	"$mod SHIFT, 2, movetoworkspace, 2"
+	"$mod SHIFT, 3, movetoworkspace, 3"
+	"$mod SHIFT, 4, movetoworkspace, 4"
+	"$mod SHIFT, 5, movetoworkspace, 5"
+	"$mod SHIFT, 6, movetoworkspace, 6"
+	"$mod SHIFT, 7, movetoworkspace, 7"
+	"$mod SHIFT, 8, movetoworkspace, 8"
+	"$mod SHIFT, 9, movetoworkspace, 9"
+	"$mod SHIFT, 0, movetoworkspace, 10"
+	# Example special workspace (scratchpad)
+	"$mod, S, togglespecialworkspace, magic"
+	"$mod SHIFT, S, movetoworkspace, special:magic"
+	# Scroll through existing workspaces with main"$mod + scroll
+	"$mod, mouse_down, workspace, e+1"
+	"$mod, mouse_up, workspace, e-1"
+      ];
+      bindm = [
+	"$mainMod, mouse:272, movewindow"
+	"$mainMod, mouse:273, resizewindow"
+      ];
+      binde = [
+	"$mod CTRL, h, resizeactive, -10 0"
+	"$mod CTRL, j, resizeactive, 0 10"
+	"$mod CTRL, k, resizeactive, 0 -10"
+	"$mod CTRL, l, resizeactive, 10 0"
+      ];	
     };
   };
 
