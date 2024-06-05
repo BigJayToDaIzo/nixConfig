@@ -55,10 +55,10 @@
 	"$mod, V, togglefloating,"
 	# "$mod, R, exec, $menu"
 	"$mod, F, fullscreen,"
-	# "$mod, Y, exec, firefox -new-instance -P Youtube"
+	"$mod, Y, exec, firefox -new-instance -P Youtube"
 	"$mod, Y, exec, firefox"
-	# "$mod, D, exec, firefox -new-instance -kiosk -P Discord"
-	# "$mod, P, exec, firefox -new-instance -private-window -P Private"
+	"$mod, D, exec, firefox -new-instance -kiosk -P Discord"
+	"$mod, P, exec, firefox -new-instance -private-window -P Private"
 	"$mod CTRL ALT, L, exec, $lock"
 	'',Print, exec, grim -g "$(slurp)" - | swappy -f -''
 	# "$mod, T, togglesplit, # dwindle
@@ -141,18 +141,16 @@
 	"WLR_RENDERER_ALLOW_SOFTWARE, 1"
       ];
       exec-once = [
+	"waybar"
 	"/usr/lib/polkit-kde-authentication-agent-1"
-	"[workspace special:magic silent] kitty -e lazygit -p ~/.config/"
-	"[workspace 1 silent;fullscreen] kitty -e zellij attach pomoTask"
-	"[workspace 2 silent;fullscreen] kitty -e btop"
+	"[workspace special:magic silent] alacritty -e lazygit -p ~/.config/"
+	"[workspace 1 silent;fullscreen] alacritty -e zellij attach pomoTask"
+	"[workspace 2 silent;fullscreen] alacritty -e btop"
 	"[workspace 4] firefox -new-instance -kiosk -P Discord"
-	"[workspace 5] kitty"
-	"[workspace 6 silent] kitty -e zellij attach configs"
+	"[workspace 5] alacritty"
+	"[workspace 6 silent] alacritty -e zellij attach configs"
 	"[workspace 8 silent] firefox -new-instance -P Youtube"
 	"[workspace 9 silent] vlc"
-      ];
-      exec = [
-	"waybar"
       ];
     };
   };
