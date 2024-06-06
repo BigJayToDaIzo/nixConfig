@@ -23,8 +23,7 @@ layout {
         }
         pane size=4 { // pomotimer
           name "🍅 Pomo F'SHOmo 🍅"
-          command "tomatoshell"
-          args "-n" "6" "-p" "p"
+          command "pom"
           start_suspended true
         } 
       }

@@ -12,6 +12,7 @@
     pkgs.asciiquarium
     pkgs.dunst
     pkgs.cbonsai
+    pkgs.pom
     pkgs.peaclock
     pkgs.fish
     pkgs.fzf
