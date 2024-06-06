@@ -9,6 +9,9 @@
   home.username = "jm";
   home.homeDirectory = "/home/jm";
   home.packages = [
+    pkgs.asciiquarium
+    pkgs.cbonsai
+    pkgs.peaclock
     pkgs.fish
     pkgs.fzf
     pkgs.zoxide
@@ -253,6 +256,13 @@
       enable = true;
       enableFishIntegration = true;
 
+    };
+    zellij = {
+      enable = true;
+      enableFishIntegration = true;
+      settings = {
+	
+      };
     };
   };
   # services.service here and beyond
