@@ -68,7 +68,7 @@ layout {
           args "--config-dir" "/home/jm/.config/peaclock"
           name ""
         }
-        pane size=9 { // pomotimer
+        pane size=8 { // pomotimer
           name "🍅 Pomo F'SHOmo 🍅"
           command "pom"
           start_suspended true
