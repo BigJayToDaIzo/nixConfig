@@ -131,8 +131,8 @@
       '';
     };
     hyprland.enable = true;
+    yazi.enable = true;
   };
-
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
@@ -145,6 +145,7 @@
       neovim
       curl
       wget
+      yazi
     ];
     sessionVariables = {
       STARSHIP_CONFIG = "$HOME/.config/starship/starship.toml";

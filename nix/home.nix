@@ -58,10 +58,9 @@
 	"$mod, Q, exec, alacritty"
 	"$mod, C, killactive,"
 	"$mod CTRL, M, exit,"
-	"$mod, E, exec, yazi"
+	"$mod, E, exec, alacritty -e yazi"
 	"$mod, V, togglefloating,"
 	"$mod, R, exec, rofi -show run"
-	''$mod, E, exec, rofi "emoji:rofimoji" -show emoji''
 	"$mod, F, fullscreen,"
 	"$mod, Y, exec, firefox -new-instance -P Youtube"
 	"$mod, Y, exec, firefox"
