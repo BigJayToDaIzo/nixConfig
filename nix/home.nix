@@ -211,9 +211,10 @@
       keymaps = [
 	{
 	  action = "<cmd>Oil<CR>";
+	  mode = "n";
 	  key = "_";
 	  options = {
-	    silet = true;
+	    silent = true;
 	  };
 	}
       ];
