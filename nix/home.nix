@@ -9,6 +9,8 @@
   home.username = "jm";
   home.homeDirectory = "/home/jm";
   home.packages = [
+    pkgs.rofi-wayland
+    pkgs.rofimoji
     pkgs.asciiquarium
     pkgs.dunst
     pkgs.cbonsai
@@ -56,9 +58,10 @@
 	"$mod, Q, exec, alacritty"
 	"$mod, C, killactive,"
 	"$mod CTRL, M, exit,"
-	# "$mod, E, exec, $filemanager"
+	"$mod, E, exec, yazi"
 	"$mod, V, togglefloating,"
-	# "$mod, R, exec, $menu"
+	"$mod, R, exec, rofi -show run"
+	''$mod, E, exec, rofi "emoji:rofimoji" -show emoji''
 	"$mod, F, fullscreen,"
 	"$mod, Y, exec, firefox -new-instance -P Youtube"
 	"$mod, Y, exec, firefox"
