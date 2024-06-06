@@ -13,7 +13,6 @@
     pkgs.dunst
     pkgs.cbonsai
     pkgs.peaclock
-    pkgs.tomatoshell
     pkgs.fish
     pkgs.fzf
     pkgs.zoxide
