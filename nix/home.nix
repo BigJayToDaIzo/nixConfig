@@ -25,7 +25,6 @@
     pkgs.btop
     pkgs.pfetch-rs
     pkgs.fastfetch
-    pkgs.kitty
     pkgs.alacritty
     pkgs.zellij
     pkgs.taskwarrior3
@@ -194,14 +193,6 @@
 	};
       };
     };
-    kitty = {
-      enable = true;
-      font.name = "0xProto Nerd Font Mono";
-      font.size = 14;
-      settings = {
-
-      };
-    };
     nixvim = {
       enable = true;
       enableMan = true;
@@ -280,6 +271,12 @@
       enable = true;
       enableFishIntegration = true;
       enableTransience = true;
+    };
+    taskwarrior = {
+      enable = true;
+      colorTheme = "dark-violets-256";
+      config = {};
+
     };
     zoxide = {
       enable = true;
