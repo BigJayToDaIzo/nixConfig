@@ -16,12 +16,12 @@ layout {
           borderless true
           args "-li" "-t 0.5" "-m" "Wake up.Be Kind.Kick Ass,Repeat!"
         }
-        pane size="30%"{
+        pane size=10 {
           command "peaclock"
           args "--config-dir" "/home/jm/.config/peaclock"
           name ""
         }
-        pane size=4 { // pomotimer
+        pane size=9 { // pomotimer
           name "🍅 Pomo F'SHOmo 🍅"
           command "pom"
           start_suspended true
