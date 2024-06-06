@@ -49,9 +49,12 @@
     systemd.enable = true;
     settings = {
       "$mod" = "SUPER";
-      input ={
+      input = {
 	kb_layout = "us";
 	kb_options = "caps:swapescape";
+      };
+      misc = {
+	mouse_move_focuses_monitor = false;
       };
       bind = [
 	"$mod, Q, exec, alacritty"
@@ -283,4 +286,5 @@
     };
   };
   # services.service here and beyond
+  services.taskwarrior-sync.enable = true;
 }
