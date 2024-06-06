@@ -208,6 +208,16 @@
       vimAlias = true;
       colorschemes.ayu.enable = true;
       colorschemes.ayu.settings.mirage = true;
+      keymaps = [
+	{
+	  action = "<cmd>Oil<CR>";
+	  key = "_";
+	  options = {
+	    silet = true;
+	  };
+	}
+      ];
+    
       opts = {
 	number = true;
 	relativenumber = true;

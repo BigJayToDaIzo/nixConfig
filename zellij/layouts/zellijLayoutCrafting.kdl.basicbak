@@ -1,0 +1,25 @@
+layout {
+  default_tab_template {
+    pane size=1 borderless=true {
+      plugin location="status-bar"
+    }
+    children
+    pane size=1 borderless=true {
+      plugin location="tab-bar"
+    }
+  }
+  tab {
+    pane split_direction="horizontal" {
+      pane {
+        size "75%"
+        focus true
+        borderless true
+        cwd "~/.config/zellij/layouts"
+        command "nvim"
+      }
+      pane {
+        cwd "~/.config/zellij/layouts"
+      }
+    }
+  }
+}
