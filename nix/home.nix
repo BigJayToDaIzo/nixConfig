@@ -27,7 +27,6 @@
     pkgs.fastfetch
     pkgs.alacritty
     pkgs.zellij
-    pkgs.taskwarrior3
     pkgs.vlc
     pkgs.ripgrep
     pkgs.egl-wayland
@@ -35,6 +34,7 @@
     pkgs.swappy
     pkgs.slurp
     pkgs.waybar
+    pkgs.taskwarrior3
   ];
   home.stateVersion = "24.05";
 
@@ -272,23 +272,14 @@
       enableFishIntegration = true;
       enableTransience = true;
     };
-    taskwarrior = {
-      enable = true;
-      colorTheme = "dark-violets-256";
-      config = {};
-
-    };
     zoxide = {
       enable = true;
       enableFishIntegration = true;
-
     };
     zellij = {
       enable = true;
       enableFishIntegration = true;
-      settings = {
-	
-      };
+      settings = {};
     };
   };
   # services.service here and beyond

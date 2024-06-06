@@ -49,7 +49,6 @@
   #TODO abstract services to it's own attr set
   # Enable the X11 windowing system.
   services.xserver.enable = true;
-  services.taskwarrior-sync.enable = true;
 
   # Enable the GNOME Desktop Environment.
   services.displayManager = {
