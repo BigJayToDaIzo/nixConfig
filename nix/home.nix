@@ -54,6 +54,7 @@
       input = {
 	kb_layout = "us";
 	kb_options = "caps:swapescape";
+	follow_mouse = 0;
       };
       misc = {
 	mouse_move_focuses_monitor = false;
