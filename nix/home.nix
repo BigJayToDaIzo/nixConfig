@@ -9,6 +9,7 @@
   home.username = "jm";
   home.homeDirectory = "/home/jm";
   home.packages = with pkgs; [
+    pavucontrol
     rofi-wayland
     rofimoji
     asciiquarium
@@ -35,6 +36,7 @@
     slurp
     waybar
     taskwarrior3
+    steam
   ];
   home.stateVersion = "24.05";
 
@@ -276,14 +278,6 @@
       enable = true;
       enableFishIntegration = true;
       enableTransience = true;
-    };
-    gamemode.enable = true;
-    steam = {
-      enable = true;
-      gamescopeSession.enable = true;
-      environment.systemPackages = with pkgs; [
-	mangohud
-      ];
     };
     zoxide = {
       enable = true;
