@@ -8,33 +8,33 @@
   # paths it should manage.
   home.username = "jm";
   home.homeDirectory = "/home/jm";
-  home.packages = [
-    pkgs.rofi-wayland
-    pkgs.rofimoji
-    pkgs.asciiquarium
-    pkgs.dunst
-    pkgs.cbonsai
-    pkgs.pom
-    pkgs.peaclock
-    pkgs.fish
-    pkgs.fzf
-    pkgs.zoxide
-    pkgs.lazygit
-    pkgs.gh
-    pkgs.wl-clipboard
-    pkgs.btop
-    pkgs.pfetch-rs
-    pkgs.fastfetch
-    pkgs.alacritty
-    pkgs.zellij
-    pkgs.vlc
-    pkgs.ripgrep
-    pkgs.egl-wayland
-    pkgs.grim
-    pkgs.swappy
-    pkgs.slurp
-    pkgs.waybar
-    pkgs.taskwarrior3
+  home.packages = with pkgs; [
+    rofi-wayland
+    rofimoji
+    asciiquarium
+    dunst
+    cbonsai
+    pom
+    peaclock
+    fish
+    fzf
+    zoxide
+    lazygit
+    gh
+    wl-clipboard
+    btop
+    pfetch-rs
+    fastfetch
+    alacritty
+    zellij
+    vlc
+    ripgrep
+    egl-wayland
+    grim
+    swappy
+    slurp
+    waybar
+    taskwarrior3
   ];
   home.stateVersion = "24.05";
 
@@ -47,8 +47,6 @@
     package = pkgs.hyprland;
     xwayland.enable = true;
     systemd.enable = true;
-    hide_cursor_on_key_press = true;
-    # inactive_timeout = 10;
     settings = {
       "$mod" = "SUPER";
       input = {
@@ -57,6 +55,8 @@
       };
       misc = {
 	mouse_move_focuses_monitor = false;
+	hide_cursor_on_key_press = true;
+	# inactive_timeout = 10;
       };
       bind = [
 	"$mod, Q, exec, alacritty"
@@ -276,6 +276,14 @@
       enable = true;
       enableFishIntegration = true;
       enableTransience = true;
+    };
+    gamemode.enable = true;
+    steam = {
+      enable = true;
+      gamescopeSession.enable = true;
+      environment.systemPackages = with pkgs; [
+	mangohud
+      ];
     };
     zoxide = {
       enable = true;
