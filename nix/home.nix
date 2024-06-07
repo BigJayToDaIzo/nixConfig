@@ -47,6 +47,8 @@
     package = pkgs.hyprland;
     xwayland.enable = true;
     systemd.enable = true;
+    hide_cursor_on_key_press = true;
+    # inactive_timeout = 10;
     settings = {
       "$mod" = "SUPER";
       input = {
