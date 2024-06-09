@@ -38,7 +38,7 @@
     taskwarrior3
     steam
   ];
-  home.stateVersion = "24.05";
+  home.stateVersion = "23.11";
 
   # Fonts stuff
   fonts.fontconfig.defaultFonts.emoji = ["Symbols Nerd Font Mono"];

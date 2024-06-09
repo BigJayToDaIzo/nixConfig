@@ -63,7 +63,7 @@ layout {
         pane {
           command "cbonsai"
           borderless true
-          args "-li" "-t 0.5" "-m" "Wake up.Be Kind.Kick Ass,Repeat!"
+          args "-li" "-t 0.5" "-m" "Wake up. Be Kind. Kick Ass. Repeat!"
         }
         pane size=10 {
           command "peaclock"
