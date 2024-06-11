@@ -38,11 +38,12 @@
     taskwarrior3
     steam
   ];
+  # You can update Home Manager without changing this value. See
+  # the Home Manager release notes for a list of state version
+  # changes in each release.
   home.stateVersion = "23.11";
-
   # Fonts stuff
   fonts.fontconfig.defaultFonts.emoji = ["Symbols Nerd Font Mono"];
-
   # Window Manager (other in config, move here)
   wayland.windowManager.hyprland = {
     enable = true;
@@ -161,6 +162,7 @@
 	"[workspace special:magic silent] alacritty -e lazygit -p ~/.config/"
 	"[workspace 1 silent;fullscreen] alacritty -e zellij attach pomoTask"
 	"[workspace 2 silent;fullscreen] alacritty -e btop"
+	"[workspace 3 silent] pavucontrol"
 	"[workspace 4] firefox -new-instance -kiosk -P Discord"
 	"[workspace 5] alacritty"
 	"[workspace 6 silent] alacritty -e zellij attach configs"
@@ -169,7 +171,6 @@
       ];
     };
   };
-
   # programs.program here and beyond
   # Let Home Manager install and manage itself.
   programs = {
@@ -209,6 +210,7 @@
       vimAlias = true;
       colorschemes.ayu.enable = true;
       colorschemes.ayu.settings.mirage = true;
+      clipboard.register = "unnamedplus";
       keymaps = [
 	{
 	  action = "<cmd>Oil<CR>";
@@ -219,7 +221,6 @@
 	  };
 	}
       ];
-    
       opts = {
 	number = true;
 	relativenumber = true;

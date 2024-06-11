@@ -136,8 +136,6 @@
       curl
       wget
       yazi
-      gamemode
-      mangohud
     ];
     sessionVariables = {
       STARSHIP_CONFIG = "$HOME/.config/starship/starship.toml";
