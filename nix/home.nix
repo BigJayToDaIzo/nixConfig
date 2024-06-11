@@ -227,17 +227,22 @@
 	shiftwidth = 2;
       };
       plugins = {
+	autoclose.enable = true;
 	bufferline = {
 	  enable = true;
 	};
-	lazy = {
-	  
-	};
+	cmp.enable = true;
+	comment.enable = true;
+	conform-nvim.enable = true;
+	copilot-lua.enable = true;
+	copilot-cmp.enable = true;
+	fidget.enable = true;
+	flash.enable = true;
 	lazygit = {
 	  enable = true;
 	};
 	lint = {
-	  
+	  enable = true;
 	};
 	lualine = {
 	  enable = true;
@@ -253,26 +258,26 @@
 	    htmx.enable = true;
 	    lua-ls.enable = true;
 	    nixd.enable = true;
-
 	  };
 	};
 	lsp-format.enable = true;
+	lsp-status.enable = true;	
 	mini = {
 	  enable = true;
 	};
-	nvim-autopairs = {
-	  
-	};
+	nix.enable = true;
+	nix-develop.enable = true;
 	oil = {
 	  enable = true;
 	};
 	telescope = {
+	  enable = true;
 	};
 	treesitter = {
 	  enable = true;
 	};
 	which-key = {
-	  
+	  enable = true;
 	};
       };
     };

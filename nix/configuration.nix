@@ -130,6 +130,7 @@
   # $ nix search wget
   environment = {
     systemPackages = with pkgs; [
+      gccgo14
       bash
       git
       neovim
