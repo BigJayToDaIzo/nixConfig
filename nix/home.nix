@@ -37,6 +37,8 @@
     waybar
     taskwarrior3
     steam
+    golangci-lint
+    golangci-lint-langserver
   ];
   # You can update Home Manager without changing this value. See
   # the Home Manager release notes for a list of state version
@@ -234,8 +236,6 @@
 	cmp.enable = true;
 	comment.enable = true;
 	conform-nvim.enable = true;
-	copilot-lua.enable = true;
-	copilot-cmp.enable = true;
 	fidget.enable = true;
 	flash.enable = true;
 	lazygit = {
